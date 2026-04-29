@@ -1,0 +1,27 @@
+<h1>Product AI Assistant</h1>
+
+<p>
+    Ask a natural language question about the products stored in MongoDB.
+</p>
+
+<form asp-action="Ask" method="post">
+    <div class="mb-3">
+        <label>Question</label>
+        <input type="text" name="question" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Ask AI
+    </button>
+</form>
+
+@if (ViewBag.Response != null)
+{
+    <div class="card mt-4 p-3">
+        <h3>Your Question</h3>
+        <p>@ViewBag.Question</p>
+
+        <h3>AI Response</h3>
+        <p>@ViewBag.Response</p>
+    </div>
+}

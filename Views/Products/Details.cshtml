@@ -1,0 +1,12 @@
+@model StoreMongoApp.Models.Product
+
+<h1>Product Details</h1>
+
+<div class="card p-3">
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Price:</strong> @Model.Price</p>
+    <p><strong>Category:</strong> @Model.Category</p>
+    <p><strong>In Stock:</strong> @Model.InStock</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Back</a>
